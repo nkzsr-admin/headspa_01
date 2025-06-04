@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>極上ヘッドスパ | 癒しの時間をご提供</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Zen Kaku Gothic New', sans-serif; }
+  </style>
+</head>
+<body class="text-gray-800 bg-white">
+
+<!-- Responsive Header Section -->
+<header class="bg-[#f7f6ef] text-[#4b4322] text-sm md:text-base fixed top-0 left-0 right-0 z-50 shadow-md">
+  <div class="py-3 px-6 md:px-12 flex justify-between items-center">
+    <div class="text-xl font-bold">〇〇サロン</div>
+    <button id="menu-toggle" class="md:hidden block focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="hidden md:flex md:items-center md:justify-between md:px-12 md:py-1 flex-col md:flex-row bg-[#f7f6ef] md:bg-transparent text-base font-semibold">
+    <div class="flex flex-col md:flex-row md:items-center md:space-x-8 w-full">
+      <a href="index.html" class="block px-6 py-2 hover:underline">TOP PAGE</a>
+      <a href="headspa-menu.html" class="block px-6 py-2 hover:underline">サロンメニュー</a>
+      <a href="headspa-news.html" class="block px-6 py-2 hover:underline">お知らせ</a>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:space-x-6 md:ml-4 px-6 py-2 md:p-0">
+      <div class="text-center md:text-right md:mr-3 whitespace-nowrap">
+        <p class="font-bold text-lg md:text-base leading-tight">TEL 000-000-0000</p>
+        <p class="text-xs md:text-xs leading-tight">営業時間: 00:00〜00:00</p>
+      </div>
+      <div class="text-center md:text-left mt-4 md:mt-0">
+        <a href="#reservation" class="inline-block bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition font-bold text-base">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- Spacer for fixed header -->
+<div class="h-[72px] md:h-[80px]"></div>
+
+<!-- Menu Page Section -->
+<section class="bg-white py-16 px-6 md:px-12">
+  <div class="text-center mb-12">
+    <h2 class="text-2xl font-semibold tracking-widest text-gray-500">MENU</h2>
+    <h1 class="text-4xl font-bold text-gray-800 border-b-2 inline-block pb-2 mb-4">メニュー一覧</h1>
+    <p class="text-lg text-yellow-600">疲れを癒したい</p>
+  </div>
+
+  <div class="space-y-16 max-w-5xl mx-auto">
+    <!-- 疲れを癒したいコース 1 -->
+    <div class="md:flex md:gap-8 border p-6 rounded-lg shadow-sm">
+      <img src="pexels-mareefe-932577.jpg" class="w-full md:w-1/2 rounded mb-4 md:mb-0" alt="コース画像">
+      <div class="md:w-1/2">
+        <h3 class="text-2xl font-semibold text-yellow-700 mb-2">癒しアロマコース</h3>
+        <p class="text-gray-700 mb-4">天然アロマを使用した極上の癒し体験。自律神経を整え、深いリラックスへ導きます。</p>
+        <ul class="text-gray-800 space-y-1">
+          <li>30分　3,500円（税込）</li>
+          <li>60分　6,000円（税込）</li>
+          <li>90分　8,500円（税込）</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 疲れを癒したいコース 2 -->
+    <div class="md:flex md:gap-8 border p-6 rounded-lg shadow-sm">
+      <img src="pexels-mareefe-932577.jpg" class="w-full md:w-1/2 rounded mb-4 md:mb-0" alt="コース画像">
+      <div class="md:w-1/2">
+        <h3 class="text-2xl font-semibold text-yellow-700 mb-2">デトックススパコース</h3>
+        <p class="text-gray-700 mb-4">頭皮の老廃物をすっきり洗い流し、血行促進・爽快感を実感できるコース。</p>
+        <ul class="text-gray-800 space-y-1">
+          <li>30分　3,000円（税込）</li>
+          <li>60分　5,800円（税込）</li>
+          <li>90分　8,000円（税込）</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 美髪・美肌コース -->
+    <div class="text-center mt-20 mb-6">
+      <p class="text-lg text-yellow-600">美髪・美肌を目指したい</p>
+    </div>
+
+    <div class="md:flex md:gap-8 border p-6 rounded-lg shadow-sm">
+      <img src="pexels-mareefe-932577.jpg" class="w-full md:w-1/2 rounded mb-4 md:mb-0" alt="美髪美肌">
+      <div class="md:w-1/2">
+        <h3 class="text-2xl font-semibold text-yellow-700 mb-2">美髪集中ケアコース</h3>
+        <p class="text-gray-700 mb-4">栄養成分をたっぷり含んだトリートメントで髪にハリと艶を与えます。</p>
+        <ul class="text-gray-800 space-y-1">
+          <li>30分　3,800円（税込）</li>
+          <li>60分　6,500円（税込）</li>
+          <li>90分　8,800円（税込）</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- オプションメニュー -->
+    <div class="text-center mt-20 mb-6">
+      <p class="text-lg text-yellow-600">オプションメニュー</p>
+    </div>
+
+    <div class="space-y-8">
+      <div class="border p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">延長（10分）</h3>
+        <p class="text-gray-600 mb-2">お好きなメニューをさらにご堪能いただける延長プランです。</p>
+        <p class="text-gray-800">1,000円（税込）</p>
+      </div>
+      <div class="border p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">シャンプー・トリートメント</h3>
+        <p class="text-gray-600 mb-2">髪と頭皮をいたわる厳選成分で仕上げる極上のケア。</p>
+        <p class="text-gray-800">2,000円（税込）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Profile Section -->
+<section class="py-16 px-6 md:px-12 bg-gray-50">
+  <div class="max-w-3xl mx-auto text-center">
+    <img src="pexels-nolandlive-30111684.jpg" alt="セラピスト" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+    <h2 class="text-2xl font-semibold mb-2">セラピスト：仲座 空良</h2>
+    <p class="text-gray-700 mb-2">国家資格保持 / 施術歴11年</p>
+    <p class="text-gray-600">趣味：アロマ集め・ヨガ・猫と過ごす時間</p>
+  </div>
+</section>
+
+<!-- Reservation Section -->
+<section id="reservation" class="py-16 px-6 md:px-12 text-center bg-white">
+  <h2 class="text-3xl font-bold mb-6">ご予約・お問い合わせ</h2>
+  <p class="mb-6 text-gray-700">LINEまたはお電話でお気軽にご予約ください。</p>
+  <a href="https://line.me/R/" class="bg-green-500 text-white font-bold px-8 py-3 rounded-full inline-block hover:bg-green-600 transition">LINEで予約</a>
+  <p class="mt-4 text-gray-600 text-xl">Tel: 090-1234-5678</p>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white text-center py-6">
+  <p>&copy; 2025 極上ヘッドスパ. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
