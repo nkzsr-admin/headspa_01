@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>極上ヘッドスパ | 癒しの時間をご提供</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">s
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Zen Kaku Gothic New', sans-serif; }
+  </style>
+</head>
+<body class="text-gray-800 bg-white">
+
+<!-- Responsive Header Section -->
+<header class="bg-[#f7f6ef] text-[#4b4322] text-sm md:text-base fixed top-0 left-0 right-0 z-50 shadow-md">
+  <div class="py-3 px-6 md:px-12 flex justify-between items-center">
+    <div class="text-xl font-bold">〇〇サロン</div>
+    <button id="menu-toggle" class="md:hidden block focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="hidden md:flex md:items-center md:justify-between md:px-12 md:py-1 flex-col md:flex-row bg-[#f7f6ef] md:bg-transparent text-base font-semibold">
+    <div class="flex flex-col md:flex-row md:items-center md:space-x-8 w-full">
+      <a href="index.html" class="block px-6 py-2 hover:underline">TOP PAGE</a>
+      <a href="headspa-menu.html" class="block px-6 py-2 hover:underline">サロンメニュー</a>
+      <a href="headspa-news.html" class="block px-6 py-2 hover:underline">お知らせ</a>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:space-x-6 md:ml-4 px-6 py-2 md:p-0">
+      <div class="text-center md:text-right md:mr-3 whitespace-nowrap">
+        <p class="font-bold text-lg md:text-base leading-tight">TEL 000-000-0000</p>
+        <p class="text-xs md:text-xs leading-tight">営業時間: 00:00〜00:00</p>
+      </div>
+      <div class="text-center md:text-left mt-4 md:mt-0">
+        <a href="#reservation" class="inline-block bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition font-bold text-base">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- Spacer for fixed header -->
+<div class="h-[72px] md:h-[80px]"></div>
+
+<!-- Hero Section with Video Background -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background video -->
+  <video autoplay muted loop playsinline class="absolute w-full h-full object-cover">
+    <source src="headspa_hero.mp4" type="video/mp4" />
+    お使いのブラウザは動画に対応していません。
+  </video>
+
+  <!-- グラデーションオーバーレイ -->
+  <div class="absolute inset-0 bg-gradient-to-br from-pink-300/30 to-white/20 mix-blend-overlay"></div>
+
+  <!-- テキストとボタン -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 fade-in">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-4 tracking-wide">極上の癒しをあなたに</h1>
+    <p class="text-xl md:text-2xl text-white mb-6 drop-shadow-sm font-medium">心と身体をときほぐす、贅沢なヘッドスパ体験</p>
+    <a href="#reservation" class="bg-white text-pink-600 font-bold px-10 py-4 rounded-full shadow-lg hover:bg-pink-100 transition">
+      ご予約はこちら
+    </a>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-16 px-6 md:px-12 bg-gray-50">
+  <div class="max-w-5xl mx-auto text-center mb-12">
+    <h2 class="text-3xl font-bold mb-4">サービス内容</h2>
+    <p class="text-gray-600 mb-6">お客様の状態に合わせた、極上の施術をご提供します</p>
+    <a href="headspa-menu.html" class="inline-block bg-pink-500 text-white font-bold px-8 py-3 rounded-full shadow hover:bg-pink-600 transition">
+      サービス一覧を見る
+    </a>
+  </div>
+  <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <div class="bg-white rounded-xl shadow p-6">
+      <h3 class="text-xl font-semibold mb-2">炭酸ヘッドスパ</h3>
+      <p class="text-gray-600">頭皮の血行を促進し、爽快感と美髪効果をもたらします。</p>
+      <p class="mt-4 font-bold">60分 / 6,000円</p>
+    </div>
+    <div class="bg-white rounded-xl shadow p-6">
+      <h3 class="text-xl font-semibold mb-2">オイルリラクゼーション</h3>
+      <p class="text-gray-600">アロマオイルで癒しと深いリラクゼーションを。</p>
+      <p class="mt-4 font-bold">45分 / 5,500円</p>
+    </div>
+    <div class="bg-white rounded-xl shadow p-6">
+      <h3 class="text-xl font-semibold mb-2">育毛・頭皮ケア</h3>
+      <p class="text-gray-600">頭皮環境を整え、健康な髪の育成をサポート。</p>
+      <p class="mt-4 font-bold">30分 / 4,000円</p>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="py-16 px-6 md:px-12">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">こんな方におすすめ</h2>
+    <ul class="grid gap-4 md:grid-cols-2 text-left text-gray-700">
+      <li>✔ デスクワークで首・肩が重い</li>
+      <li>✔ 睡眠の質が悪く、疲れがとれない</li>
+      <li>✔ 抜け毛や頭皮のベタつきが気になる</li>
+      <li>✔ 自分へのご褒美時間が欲しい</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="bg-gray-50 py-16 px-6 md:px-12">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">お客様の声</h2>
+    <!-- PC表示：上3、下2 -->
+    <div class="hidden md:grid grid-cols-3 gap-6 mb-6">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <p class="text-yellow-500 text-lg mb-2">★★★★★</p>
+        <p class="italic text-gray-700">「頭が軽くなって、目もスッキリしました！空間もとても落ち着けます。」</p>
+        <p class="mt-4 font-semibold text-right">— 30代女性</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <p class="text-yellow-500 text-lg mb-2">★★★★★</p>
+        <p class="italic text-gray-700">「肩こりがラクになり、夜もぐっすり眠れました。また来たいです！」</p>
+        <p class="mt-4 font-semibold text-right">— 40代男性</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <p class="text-yellow-500 text-lg mb-2">★★★★★</p>
+        <p class="italic text-gray-700">「毎回寝落ちしてしまうほどの心地よさ。癒されました！」</p>
+        <p class="mt-4 font-semibold text-right">— 20代女性</p>
+      </div>
+    </div>
+    <div class="hidden md:grid grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <p class="text-yellow-500 text-lg mb-2">★★★★★</p>
+        <p class="italic text-gray-700">「スタッフさんがとても丁寧で安心感がありました。また通いたいです。」</p>
+        <p class="mt-4 font-semibold text-right">— 50代女性</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <p class="text-yellow-500 text-lg mb-2">★★★★★</p>
+        <p class="italic text-gray-700">「自分へのご褒美にぴったりな時間。大満足です！」</p>
+        <p class="mt-4 font-semibold text-right">— 30代男性</p>
+      </div>
+    </div>
+
+    <!-- モバイル表示：スライダー風（横スクロール） -->
+    <div class="md:hidden overflow-x-auto flex space-x-4 snap-x snap-mandatory">
+      <div class="flex-shrink-0 w-80 snap-center bg-white p-6 rounded-lg shadow">
+        <p class="text-yellow-500 text-lg mb-2">★★★★★</p>
+        <p class="italic text-gray-700">「頭が軽くなって、目もスッキリしました！空間もとても落ち着けます。」</p>
+        <p class="mt-4 font-semibold text-right">— 30代女性</p>
+      </div>
+      <div class="flex-shrink-0 w-80 snap-center bg-white p-6 rounded-lg shadow">
+        <p class="text-yellow-500 text-lg mb-2">★★★★★</p>
+        <p class="italic text-gray-700">「肩こりがラクになり、夜もぐっすり眠れました。また来たいです！」</p>
+        <p class="mt-4 font-semibold text-right">— 40代男性</p>
+      </div>
+      <div class="flex-shrink-0 w-80 snap-center bg-white p-6 rounded-lg shadow">
+        <p class="text-yellow-500 text-lg mb-2">★★★★★</p>
+        <p class="italic text-gray-700">「毎回寝落ちしてしまうほどの心地よさ。癒されました！」</p>
+        <p class="mt-4 font-semibold text-right">— 20代女性</p>
+      </div>
+      <div class="flex-shrink-0 w-80 snap-center bg-white p-6 rounded-lg shadow">
+        <p class="text-yellow-500 text-lg mb-2">★★★★★</p>
+        <p class="italic text-gray-700">「スタッフさんがとても丁寧で安心感がありました。また通いたいです。」</p>
+        <p class="mt-4 font-semibold text-right">— 50代女性</p>
+      </div>
+      <div class="flex-shrink-0 w-80 snap-center bg-white p-6 rounded-lg shadow">
+        <p class="text-yellow-500 text-lg mb-2">★★★★★</p>
+        <p class="italic text-gray-700">「自分へのご褒美にぴったりな時間。大満足です！」</p>
+        <p class="mt-4 font-semibold text-right">— 30代男性</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Access Section -->
+<section class="py-16 px-6 md:px-12 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">アクセス</h2>
+    <p class="text-center mb-4">〒123-4567 沖縄県那覇市〇〇1-2-3<br>ゆいレール「県庁前駅」から徒歩5分</p>
+    <div class="w-full h-64">
+      <iframe src="https://www.google.com/maps/embed?..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Profile Section -->
+<section class="py-16 px-6 md:px-12 bg-gray-50">
+  <div class="max-w-3xl mx-auto text-center">
+    <img src="pexels-nolandlive-30111684.jpg" alt="セラピスト" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+    <h2 class="text-2xl font-semibold mb-2">セラピスト：仲座 空良</h2>
+    <p class="text-gray-700 mb-2">国家資格保持 / 施術歴11年</p>
+    <p class="text-gray-600">趣味：アロマ集め・ヨガ・猫と過ごす時間</p>
+  </div>
+</section>
+
+<!-- Reservation Section -->
+<section id="reservation" class="py-16 px-6 md:px-12 text-center bg-white">
+  <h2 class="text-3xl font-bold mb-6">ご予約・お問い合わせ</h2>
+  <p class="mb-6 text-gray-700">LINEまたはお電話でお気軽にご予約ください。</p>
+  <a href="https://line.me/R/" class="bg-green-500 text-white font-bold px-8 py-3 rounded-full inline-block hover:bg-green-600 transition">LINEで予約</a>
+  <p class="mt-4 text-gray-600 text-xl">Tel: 090-1234-5678</p>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white text-center py-6">
+  <p>&copy; 2025 極上ヘッドスパ. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
