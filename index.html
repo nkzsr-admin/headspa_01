@@ -26,7 +26,7 @@
   </div>
   <nav id="mobile-menu" class="hidden md:flex md:items-center md:justify-between md:px-12 md:py-1 flex-col md:flex-row bg-[#f7f6ef] md:bg-transparent text-base font-semibold">
     <div class="flex flex-col md:flex-row md:items-center md:space-x-8 w-full">
-      <a href="index.html" class="block px-6 py-2 hover:underline">TOP PAGE</a>
+      <a href="headspa.html" class="block px-6 py-2 hover:underline">TOP PAGE</a>
       <a href="headspa-menu.html" class="block px-6 py-2 hover:underline">サロンメニュー</a>
       <a href="headspa-news.html" class="block px-6 py-2 hover:underline">お知らせ</a>
     </div>
@@ -41,15 +41,32 @@
     </div>
   </nav>
 </header>
+
+<!-- Spacer for fixed header -->
+<div id="header-spacer"></div>
+
+<!-- JavaScript for dynamic spacer height -->
 <script>
+  const header = document.querySelector("header");
+  const spacer = document.getElementById("header-spacer");
+
+  function updateSpacerHeight() {
+    spacer.style.height = `${header.offsetHeight}px`;
+  }
+
+  // 初期実行
+  updateSpacerHeight();
+
+  // ウィンドウリサイズ時も更新
+  window.addEventListener("resize", updateSpacerHeight);
+
+  // メニュー開閉時にも高さを更新
   document.getElementById('menu-toggle').addEventListener('click', function () {
     const menu = document.getElementById('mobile-menu');
     menu.classList.toggle('hidden');
+
   });
 </script>
-
-<!-- Spacer for fixed header -->
-<div class="h-[72px] md:h-[80px]"></div>
 
 <!-- Hero Section with Video Background -->
 <section class="relative h-screen flex items-center justify-center overflow-hidden">
